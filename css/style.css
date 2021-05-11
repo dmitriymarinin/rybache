@@ -1,0 +1,224 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2'), url('../fonts/Montserrat-Regular.woff') format('woff');
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Medium.woff2') format('woff2'), url('../fonts/Montserrat-Medium.woff') format('woff');
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.woff2') format('woff2'), url('../fonts/Montserrat-Bold.woff') format('woff');
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+nav {
+    display: block;
+}
+
+body {
+    background-color: var(--white);
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+input, textarea, button, label {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reset-btn {
+    width: 275px;
+    height: 57px;
+    border-radius: 44.7435px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+}
+
+.btn {
+    background-color: #FFFFFF;
+    font-weight: 500;
+    font-size: 21px;
+    color: #7DDCFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #7DDCFF;
+    color: #fff;
+    box-shadow: rgba(93, 190, 227, 0.2);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    z-index: 5;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 150px;
+}
+
+.header__list {
+    display: flex;
+    align-items: center;
+}
+
+.header__item:not(:last-child) {
+    margin-right: 45px;
+}
+
+.header__link {
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+}
+
+.header__item {
+    position: relative;
+}
+
+.header__item:after {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.header__item:after {
+    position: absolute;
+    content: '';
+    bottom: -33px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    height: 5px;
+    opacity: 0;
+}
+
+.header__item:hover:after {
+    opacity: 1;
+}
+
+.header__item-active:after {
+    position: absolute;
+    content: '';
+    bottom: -33px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    height: 5px;
+    opacity: 1;
+}
+
+.hero__container {
+    background-image: url('../img/hero.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.hero__left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 520px;
+    width: 40%;
+    background: rgba(93, 190, 227, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid #fff;
+    height: 95%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 6;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero__slider {
+    margin-bottom: -30px;
+    width: 100%;
+    background-color: #fff;
+    height: 100px;
+}
+
+.hero__logo {
+    margin-bottom: 90px;
+    display: block;
+}
+
+.hero__title {
+    font-weight: bold;
+    font-size: 50px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.hero__descr {
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 140%;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+
+.hero__slider {
+    display: flex;
+    align-items: center;
+    padding: 50px 25px 25px 25px;
+}
