@@ -53,7 +53,6 @@ nav {
 
 body {
     background-color: var(--white);
-    
 }
 
 html {
@@ -389,11 +388,20 @@ input, textarea, button, label {
 }
 
 .tabs-wrapper {
+    display: flex;
+    flex-direction: column;
     margin-right: 50px;
     padding: 20px;
-    height: 100%;
+    max-width: 613px;
     background-color: #fff;
-    box-shadow: 0px 3.74999px 41.2499px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3.74999px 41.2499px rgb(0 0 0 / 10%);
+}
+
+.tabs-wrapper>img {
+    max-height: 560px;
+    min-height: 560px;
+    margin-bottom: 25px;
+    object-fit: cover;
 }
 
 .tabs-wrapper-none {
@@ -489,9 +497,11 @@ input, textarea, button, label {
 }
 
 .number {
-    padding: 100px 0;
+    padding: 150px 0;
+    padding-bottom: 260px;
     position: relative;
     overflow: hidden;
+    box-shadow: 0px 4px 45px rgb(33 101 114 / 20%);
 }
 
 .number__container {
@@ -557,10 +567,46 @@ input, textarea, button, label {
 
 .number__descr {
     font-size: 20.6249px;
-    line-height: 112%;
+    line-height: 30px;
     color: #000000;
 }
 
-.proba {
+.restoran {
     padding: 150px 0;
+    position: relative;
+}
+
+.restoran__container {
+    display: flex;
+    align-items: center;
+}
+
+.restoran__left {
+    width: 30%;
+}
+
+.restoran__right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45%;
+    background-image: url('../img/blue-fon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.restoran__title {
+    font-weight: bold;
+    font-size: 50px;
+    color: #80DBFF;
+    margin-bottom: 25px;
+}
+
+.restoran__descr {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    color: #6A6A6A;
 }
