@@ -1,5 +1,7 @@
 "use strict";
 
+
+
 // let vacationRight = document.querySelector(".vacancion__right");
 // let currentVacationImage;
 // findCurrentVacationImage();
@@ -47,52 +49,79 @@
 var $page = $('html, body');
 $('a[href*="#"]').click(function () {
   $page.animate({
-    scrollTop: $($.attr(this, 'href')).offset().top-= 200
+    scrollTop: $($.attr(this, 'href')).offset().top -= 200
   }, 400);
   return false;
 });
 
-// $('.clients__container').slick({
-//   infinite: true,
-//   slidesToShow: 5,
+$('.hero__slider-title').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.hero__slider-img',
+	 autoplay: true
+});
+
+$('.hero__slider-number').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.hero__slider-img',
+	 autoplay: true
+});
+
+$('.hero__img-slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.hero__slider-img',
+	 autoplay: true
+});
+
+$('.hero__slider-img').slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  variableWidth: true,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  
+  asNavFor: '.hero__slider-title, .hero__slider-number, .hero__img-slider ',
+
+
+
+});
+
+// // НОМЕРА
+// $('.number__list').slick({
+//   infinite: false,
+//   slidesToShow: 1,
 //   slidesToScroll: 1,
 //   variableWidth: true,
-//   autoplay: true,
-//   autoplaySpeed: 3000,
-//   // adaptiveHeight: true,
-  
-//   responsive: [
-//     {
-//       breakpoint: 540,
-//       settings: {
-        
-//         slidesToShow: 2,
-       
-//       }
-//     }
-    
-//   ]
+//   clickable: true,
+//   focusOnSelect: true
+//   // asNavFor: '.hero__slider-title, .hero__slider-number, .hero__img-slider ',
+
+
 
 // });
 
-// $(window).on('load resize', function() {
-//   if ($(window).width() < 768) {
-// $('.direction__list').slick({
-//   infinite: true,
-//   centerMode: true,
-//   responsive: [
-//     {
-//       breakpoint: 768,
-//       settings: {
-//         centerMode: true,
-//         centerPadding: '60px 60px 60px 60px',
-//         slidesToShow: 1,
-       
-//       }
-//     }
-    
-//   ]
-// }); } else {
-//   $("#items.slick-initialized").slick("unslick");
-// }
-// });
+
+//   headerScroll
+function headerScroll(){
+  let header = document.querySelector('.header');
+    if (window.pageYOffset > 50) {
+       header.classList.add('header-active');
+    } else {
+      header.classList.remove('header-active');
+    }
+}
+
+window.onscroll=headerScroll;
+headerScroll();
+
+//   headerScroll
+
