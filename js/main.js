@@ -95,6 +95,31 @@ $('.hero__slider-img').slick({
 
 });
 
+
+
+$('.slider__slider').slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  variableWidth: true,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  
+  asNavFor: '.slider__title',
+
+
+
+});
+
+$('.slider__title').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider__slider',
+	 autoplay: true
+});
+
 // // НОМЕРА
 // $('.number__list').slick({
 //   infinite: false,
